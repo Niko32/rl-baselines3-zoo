@@ -18,14 +18,26 @@
             ]
         },
         {
-            "name": "Test Runner",
+            "name": "Model Enjoyer",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/enjoy.py",
             "console": "integratedTerminal",
             "args": [
                 "--algo", "ppo",
-                "--env", "ALE/Breakout-v5"
+                "--env", "ALE/Breakout-v5",
+                "-f", "logs"
+            ]
+        },
+        {
+            "name": "Baseline Enjoyer",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/enjoy.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--algo", "ppo",
+                "--env", "BreakoutNoFrameskip-v4"
             ]
         }
     ]
